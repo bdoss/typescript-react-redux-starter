@@ -7,8 +7,8 @@
     "node": "4.x"
   },
   "scripts": {
-    "postinstall": "npm run clean; npm run typings && npm run build",
-    "dev": "NODE_ENV=development node server.js",
+    "postinstall": "npm run clean && npm run typings && npm run build",
+    "dev": "set NODE_ENV=development&&node server.js",
     "start": "NODE_ENV=production node server.js",
     "clean": "rimraf dist",
     "prebuild": "npm run clean",
@@ -32,8 +32,7 @@
     "url": "https://github.com/rangle/rangle-starter/issues"
   },
   "devDependencies": {
-    "basscss": "^7.1.0",
-    "basscss-radium": "^3.0.0",
+    "basscss": "^7.1.1",
     "chalk": "^1.1.1",
     "css-loader": "^0.23.1",
     "express": "^4.13.3",
